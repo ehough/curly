@@ -13,9 +13,9 @@
  * URL class. http://www.ietf.org/rfc/rfc3986.txt.
  *
  *    foo://username:password@example.com:8042/over/there?name=ferret#nose
- *    \_/   \______/ \______/ \______________/\_________/ \_________/ \__/
- *     |        |        |           |             |           |        |
- *  scheme    user      pass      authority       path        query   fragment
+ *    \_/ \________________________________/\_________/ \_________/ \__/
+ *     |                  |                     |           |        |
+ *  scheme            authority               path        query   fragment
  */
 class ehough_curly_Url
 {
