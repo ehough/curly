@@ -1,7 +1,6 @@
-curly [![Build Status](https://secure.travis-ci.org/ehough/curly.png)](http://travis-ci.org/ehough/curly)
-=====
+# curly [![Build Status](https://secure.travis-ci.org/ehough/curly.png)](http://travis-ci.org/ehough/curly)
 
-Powerful PHP class for working with URLs.
+Powerful class for working with URLs. Requires PHP 5.2+.
 
 * Adheres as closely as possible to [RFC 3986](http://www.ietf.org/rfc/rfc3986.txt)
 * Fully IPv6 ready
@@ -11,14 +10,28 @@ Powerful PHP class for working with URLs.
      |                     |                     |           |        |
   scheme                authority               path        query   fragment</pre>
 
-    $url = new ehough_curly_Url('foo://username:password@example.com:8042/over/there?name=ferret#nose');
+### Sample Usage
 
-    $url->getAuthority();      // username@example.com:8042
-    $url->getFragment();       // nose
-    $url->getHost();           // example.com
-    $url->getPath();           // /over/there
-    $url->getPort();           // 8042
-    $url->getQuery();          // name=ferret
-    $url->getQueryVariables(); // array('name' => 'ferret');
-    $url->getScheme();         // foo
-    $url->getUser();           // username
+```php
+$url = new ehough_curly_Url('foo://username:password@example.com:8042/over/there?name=ferret#nose');
+
+$url->getAuthority();      // username@example.com:8042
+$url->getFragment();       // nose
+$url->getHost();           // example.com
+$url->getPath();           // /over/there
+$url->getPort();           // 8042
+$url->getQuery();          // name=ferret
+$url->getQueryVariables(); // array('name' => 'ferret');
+$url->getScheme();         // foo
+$url->getUser();           // username
+
+$url->setFragment('ear');
+$url->setHost('ehough.com');
+$url->setPath('/paved/walkway');
+$url->setPort(99);
+$url->setQueryVariables(array('moon' => 'rise', 'sun' => 'set'));
+$url->setScheme('teleport');
+$url->setUser('melissa:salsa');
+
+echo $url->toString(); // teleport://melissa:salsa@ehough.com:99/paved/walkway?moon=rise&sun=set#ear
+```
