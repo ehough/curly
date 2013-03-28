@@ -1,12 +1,8 @@
 {
     "name": "ehough/curly",
-
     "description": "Powerful PHP class for working with URLs",
-
     "homepage": "https://github.com/ehough/curly",
-
-    "license": "GPL-3.0+",
-
+    "license": "MPL-2.0",
     "authors": [
         {
             "name": "Eric Hough",
@@ -14,23 +10,12 @@
             "homepage": "http://ehough.com"
         }
     ],
-
     "require": {
-
         "php": ">=5.2.0"
     },
-
-    "require-dev": {
-        
-	    "ehough/pulsar": "1.*"
-    },
-
     "autoload": {
-
         "psr-0": {
-
             "ehough_curly": "src/main/php"
         }
     }
-
 }

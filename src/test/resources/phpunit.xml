@@ -6,7 +6,7 @@
 	stopOnSkipped="true"
 	strict="true"
     processIsolation="true"
-    bootstrap="../php/bootstrap.php">
+    bootstrap="../../../vendor/autoload.php">
 	<testsuites>
 	   <testsuite name="curly tests">
 	       <directory>../php/</directory>
